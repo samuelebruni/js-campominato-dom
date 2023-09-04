@@ -63,6 +63,9 @@ function generateBattleField(limit, fieldDomEl) {
       } else {
         cellMarkupEl.classList.toggle('bg-success');
         addPoint();
+        if (points == limit - 16 ){
+            alert('Complimenti HAI VINTO - HAI TOTALIZZATO:', points);
+        }
       }
     })
     return cellMarkupEl
