@@ -1,3 +1,9 @@
+.small{
+    width: calc(100% / 7)!important;
+}
+
+
+
 .cell{
     font-size: 50px;
     border: 1px solid white;
