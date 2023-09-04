@@ -20,8 +20,6 @@ document.getElementById('reset').addEventListener('click', function() {
 
 
 function generateBattleField(limit, fieldDomEl) {
-    // Generate battle field
-    //genererà una griglia di gioco quadrata.
     let explosiveNumber = [];
     while (explosiveNumber.length < 16){
         randomNumber = Math.ceil(Math.random() * limit)
@@ -51,14 +49,13 @@ function generateBattleField(limit, fieldDomEl) {
     cellMarkupEl.classList.add(css_class)
     cellMarkupEl.style.width = `calc(100% / ${Math.sqrt(limit)})`
   
-    //Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
     cellMarkupEl.addEventListener('click', function(){
       if (explosiveNumber.includes(numb)){
           cellMarkupEl.classList.toggle('bg-danger');
           setTimeout(function(){
             alert('HAI PERSO');
-            reset()
-          }, 1000) 
+            reset();
+          }, 500);
           
       } else {
         cellMarkupEl.classList.toggle('bg-success');
