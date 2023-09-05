@@ -53,15 +53,15 @@ function generateBattleField(limit, fieldDomEl) {
       if (explosiveNumber.includes(numb)){
           cellMarkupEl.classList.toggle('bg-danger');
           setTimeout(function(){
-            alert('HAI PERSO');
+            alert('HAI PERSO, HAI TOTALIZZATO ' + points + ' punti');
             reset();
-          }, 500);
-          
+          }, 100);
+          console.log(points);
       } else {
         cellMarkupEl.classList.toggle('bg-success');
         addPoint();
         if (points == limit - 16 ){
-            alert('Complimenti HAI VINTO - HAI TOTALIZZATO:', points);
+            alert('Complimenti HAI VINTO - HAI TOTALIZZATO: ' + points + ' punti');
         }
       }
     })
